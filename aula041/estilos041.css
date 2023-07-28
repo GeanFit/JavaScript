@@ -1,0 +1,58 @@
+@charset "UTF-8"
+
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 10px;
+}
+ 
+.curso{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 4px solid rgb(75, 75, 75);
+    padding: 10px;
+    margin: 5px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.selecionado{
+    background-color: red !important;
+    color: #fcc !important;
+    border-color: red !important; 
+}
+
+.c1, .c2, .c3, .c4, .c5, .c6{
+    background-color: #444;
+    color: #ccc;
+}
+
+.caixa{
+    border: 4px solid black;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 300px;
+}
