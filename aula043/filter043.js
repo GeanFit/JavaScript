@@ -2,6 +2,8 @@ const caixaCursos=document.querySelector("#caixaCursos")
 const btn_c=[...document.querySelectorAll(".curso")]
 const c1_2=document.querySelector("#c1_2")
 const cursos=["HTML","CSS","JavaScript","PHP","React","MySQL", "ReactNative"]
+const btnCursoSelecionado=document.getElementById("btnCursoSelecionado")
+const btnRemoverCurso=document.getElementById("btnRemoverCurso")
 
 cursos.map((el,chave)=>{
     const novoElemento=document.createElement("div")
@@ -20,4 +22,32 @@ cursos.map((el,chave)=>{
 
     novoElemento.appendChild(comandos)
     caixaCursos.appendChild(novoElemento)
+})
+
+const radioSelecionado=()=>{
+    const todosRadios=[...document.querySelectorAll("input[type=radio]")]
+    let radioSelecionado=todosRadios.filter((ele,ind,arr)=>{
+        return ele.checked
+    })
+    return radioSelecionado[0]
+}
+
+btnCursoSelecionado.addEventListener("click",(evt)=>{
+    const rs=radioSelecionado()
+    try{
+        const cursoSelecionado=rs.parentNode.previousSibling.textContent
+        alert("Selecione o curso: " + cursoSelecionado)
+    }catch(ex){
+        alert("Selecione um curso")
+    }
+})
+
+btnCursoSelecionado.addEventListener("click",(evt)=>{
+    const rs=radioSelecionado()
+    if(rs!=undefined){
+        const cursoSelecionado=rs.parentNode.parentNode
+        cursoSelecionado.removeChild()
+    }else{
+        alert("Selecione um curso")
+    }
 })
