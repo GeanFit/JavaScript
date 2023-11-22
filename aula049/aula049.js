@@ -2,7 +2,7 @@ const p_array=document.querySelector("#array")
 const btnVerificar=document.querySelector("#btnVerificar")
 const resultado=document.querySelector("resultado")
 
-const elementos_array=[01,10,14,13,12,15,11]
+const elementos_array=[10,14,13,12,15,11]
 p_array.innerHTML="["+elementos_array+"]"
 
 btnVerificar.addEventListener("click",(evt)=>{
